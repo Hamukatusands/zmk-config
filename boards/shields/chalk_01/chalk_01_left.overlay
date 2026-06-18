@@ -1,7 +1,6 @@
-#include "chalk_01.overlay"
+#include "chalk_01.dtsi"
 
 &kscan0 {
-    // 左手の列ピン指定（D4, D5, D6, D7, D8, D9 の6本を使用）
     col-gpios
         = <&xiao_d 4 GPIO_ACTIVE_HIGH>
         , <&xiao_d 5 GPIO_ACTIVE_HIGH>
