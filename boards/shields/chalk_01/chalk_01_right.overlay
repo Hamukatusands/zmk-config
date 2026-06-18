@@ -9,5 +9,18 @@
         , <&xiao_d 8 GPIO_ACTIVE_HIGH>
         , <&xiao_d 9 GPIO_ACTIVE_HIGH>
         ;
-    col-offset = <6>;
+};
+
+// 【ここを修正】col-offset は &kscan0 の中ではなく、外側の zmk_split_transform に書きます
+/ {
+    chosen {
+        zmk,matrix-transform = &default_transform;
+    };
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <12>;
+        rows = <4>;
+        col-offset = <6>;
+    };
 };
