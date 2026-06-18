@@ -1,0 +1,18 @@
+#include "chalk_01.overlay"
+
+&kscan0 {
+    // 右手の列ピン指定（右手も左手と同じピンにハンダ付けする場合の指定）
+    col-gpios
+        = <&xiao_d 4 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 5 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 6 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 7 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 8 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH>
+        ;
+};
+
+&kscan0 {
+    // 右手側は配列の読み込み順序を右から左にオフセットするための設定
+    col-offset = <6>;
+};
