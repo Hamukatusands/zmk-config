@@ -1,5 +1,10 @@
 #include "chalk_01.dtsi"
 
+// 右手側だけ、変換表の列を「6」ずらす（ここに書くのが正解です！）
+&default_transform {
+    col-offset = <6>;
+};
+
 &kscan0 {
     col-gpios
         = <&xiao_d 4 GPIO_ACTIVE_HIGH>
@@ -9,5 +14,4 @@
         , <&xiao_d 8 GPIO_ACTIVE_HIGH>
         , <&xiao_d 9 GPIO_ACTIVE_HIGH>
         ;
-    col-offset = <6>;
 };
