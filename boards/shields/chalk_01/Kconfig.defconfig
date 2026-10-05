@@ -1,0 +1,23 @@
+if SHIELD_CHALK_01_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "chalk_01"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_CHALK_01_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "chalk_01"
+
+endif
+
+if SHIELD_CHALK_01_LEFT || SHIELD_CHALK_01_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
