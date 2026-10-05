@@ -1,8 +1,10 @@
 #include "chalk_01.dtsi"
 
-&kscan0 {
-    col-offset = <6>; // 右手側は全12列のうち「6列目以降」として認識させる設定
+&default_transform {
+    col-offset = <6>; // 右手側は全体マップの6列目から開始するように指定
+};
 
+&kscan0 {
     row-gpios
         = <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row1
         , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row2
@@ -11,11 +13,11 @@
         ;
 
     col-gpios
-        = <&xiao_d 10 GPIO_ACTIVE_HIGH> // col6（右手基板の左端・人差し指側）
+        = <&xiao_d 10 GPIO_ACTIVE_HIGH> // col6
         , <&xiao_d 9  GPIO_ACTIVE_HIGH> // col5
         , <&xiao_d 8  GPIO_ACTIVE_HIGH> // col4
         , <&xiao_d 1  GPIO_ACTIVE_HIGH> // col3
         , <&xiao_d 6  GPIO_ACTIVE_HIGH> // col2
-        , <&xiao_d 5  GPIO_ACTIVE_HIGH> // col1（右手基板の右端・小指側）
+        , <&xiao_d 5  GPIO_ACTIVE_HIGH> // col1
         ;
 };
