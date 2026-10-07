@@ -1,5 +1,7 @@
 include:
   - board: xiao_ble
     shield: chalk_01_left
+    snippet: zmk-usb-logging
   - board: xiao_ble
     shield: chalk_01_right
+    snippet: zmk-usb-logging
