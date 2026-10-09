@@ -4,7 +4,7 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix-transform = &default_transform;
-        zmk,battery = &vbatt; // バッテリー監視を有効化
+        //zmk,battery = &vbatt; // バッテリー監視を有効化
     };
 
     // 電池1本（eneloop等 1.0V〜1.4V）用 バッテリー監視設定
